@@ -10,12 +10,16 @@ import { SliderComponent } from './slider/slider.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ServicesComponent } from './services/services.component';
+import {MatCardModule} from '@angular/material/card';
+ 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SliderComponent
+    SliderComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     NgbModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
