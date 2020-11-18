@@ -11,7 +11,7 @@ import { EmergencyComponent } from './emergency/emergency.component';
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'service', component: ServicesComponent},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'Covid', component: CovidComponent},
   {path: 'Prescription', component: PrescriptionComponent},
   {path: 'Emergency', component: EmergencyComponent}
