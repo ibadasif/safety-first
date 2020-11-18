@@ -1,23 +1,29 @@
 <header class="headerStyle">HOW CAN WE AID YOU?</header>
 <body>
 <div class="container">
-  <div class="box">
+  <div class="box1">
     <img class="img-center" src="../assets/covid.png">
     <h3>
       COVID-19 TESTING  
     </h3>
+    <p class="para1">Lets hope for the best!</p>
+    <button (click)="goToPage('Covid')" class="btnStyle1" mat-raised-button>Get started</button>
   </div>
   <div class="box2">
     <img class="img-center" src="../assets/aid.png">
     <h2>
        PRESCRIPTION
     </h2>
+    <p class="para2">Follow the advice rejoice your life</p>
+    <button (click)="goToPage('Prescription')" class="btnStyle2" mat-raised-button>Look here</button>
   </div>
   <div class="box3">
     <img class="img-center" src="../assets/sos.png">
-    <h2>
+    <h3>
       EMERGENCY
-    </h2>
+    </h3>
+    <p class="para3">Hurryup We still have time</p>
+    <button (click)="goToPage('Emergency')" class="btnStyle3" mat-raised-button>Hurry up</button>
   </div>
 </div>
 </body>

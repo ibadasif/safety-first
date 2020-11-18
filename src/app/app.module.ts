@@ -12,6 +12,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ServicesComponent } from './services/services.component';
 import {MatCardModule} from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
+import { CovidComponent } from './covid/covid.component';
+import { PrescriptionComponent } from './prescription/prescription.component';
+import { EmergencyComponent } from './emergency/emergency.component';
  
 
 @NgModule({
@@ -19,7 +26,12 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     NavbarComponent,
     SliderComponent,
-    ServicesComponent
+    ServicesComponent,
+    RegisterComponent,
+    HomeComponent,
+    CovidComponent,
+    PrescriptionComponent,
+    EmergencyComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +41,9 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,12 +9,13 @@ body {
 
 .headerStyle {
     text-align: center;
-    font-size: 80px;
+    font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;
     color: white;
     margin-top:45px; 
     font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 45px;
 }
 
 .container {
@@ -24,35 +25,35 @@ body {
     grid-gap: 20px;
 }
 
-.box {
-    height: 500px;
+.box1 {
+    height: 450px;
     color: black;
     border: 10px solid goldenrod;
+    margin-bottom: 190px;
     position: relative;
-    margin-bottom: 140px;
-    border-radius: 80px;
+    border-radius: 70px;
     background-color: gold;
 
 }
 
 .box2 {
-    height: 500px;
+    height: 450px;
     color: black;
     border: 10px solid mediumseagreen;
+    margin-bottom: 190px;
     position: relative;
-    margin-bottom: 140px;
-    border-radius: 80px;
+    border-radius: 70px;
     background-color: seagreen;
 
 }
 
 .box3 {
-    height: 500px;
+    height: 450px;
     color: black;
     border: 10px solid darkred;
     position: relative;
-    margin-bottom: 140px;
-    border-radius: 80px;
+    margin-bottom: 190px;
+    border-radius: 70px;
     background-color:crimson;
 
 }
@@ -89,4 +90,41 @@ h3 {
     margin-right: auto;
     width: 50%;
     margin-top: 10px;
+}
+
+.para1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+.para2 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 18px;
+}
+
+.para3 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+.btnStyle1 {
+    margin-top: 10px;
+    margin-left: 120px;
+    background-color: black;
+    color: white;
+}
+
+.btnStyle2 {
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+.btnStyle3 {
+    margin-top: 10px;
+    margin-left: 130px;
+    background-color: black;
+    color: white;
 }
