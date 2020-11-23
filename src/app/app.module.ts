@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { CovidComponent } from './covid/covid.component';
 import { PrescriptionComponent } from './prescription/prescription.component';
 import { EmergencyComponent } from './emergency/emergency.component';
+import { AboutComponent } from './about/about.component';
  
 
 @NgModule({
@@ -31,7 +32,8 @@ import { EmergencyComponent } from './emergency/emergency.component';
     HomeComponent,
     CovidComponent,
     PrescriptionComponent,
-    EmergencyComponent
+    EmergencyComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
