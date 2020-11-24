@@ -1,0 +1,32 @@
+*{
+    background-color: beige;
+    margin-top: 20pxs;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-decoration: round($number: 20);
+    text-align: center;
+    margin-top: 50;
+}
+    
+
+.button1 {
+    margin-top: 10px;
+    margin-left: 477px;
+    margin-bottom: 40px;
+    background-color: rgb(116, 143, 8);
+    color: black;
+}
+.form-check-input{
+    margin-top: 10pxs;
+    margin-bottom: 10pxs;
+}
+.form-group form-check{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-group{
+    text-decoration: crimson;
+}

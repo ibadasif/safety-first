@@ -16,10 +16,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { CovidComponent } from './covid/covid.component';
 import { PrescriptionComponent } from './prescription/prescription.component';
 import { EmergencyComponent } from './emergency/emergency.component';
+
 import { AboutComponent } from './about/about.component';
+import { Covid1Component } from './covid1/covid1.component';
+import { Covid2Component } from './covid2/covid2.component';
+import { Covid3Component } from './covid3/covid3.component';
  
 
 @NgModule({
@@ -30,10 +33,11 @@ import { AboutComponent } from './about/about.component';
     ServicesComponent,
     RegisterComponent,
     HomeComponent,
-    CovidComponent,
     PrescriptionComponent,
     EmergencyComponent,
-    AboutComponent
+    Covid1Component,
+    Covid2Component,
+    Covid3Component
   ],
   imports: [
     BrowserModule,
