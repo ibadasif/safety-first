@@ -9,6 +9,7 @@ import { EmergencyComponent } from './emergency/emergency.component';
 import { Covid1Component } from './covid1/covid1.component';
 import { Covid2Component } from './covid2/covid2.component';
 import { Covid3Component } from './covid3/covid3.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'Emergency', component: EmergencyComponent},
   {path: 'Covid1', component: Covid1Component},
   {path: 'Covid2', component: Covid2Component},
-  {path: 'Covid3', component: Covid3Component}
+  {path: 'Covid3', component: Covid3Component},
+  {path: 'About', component: AboutComponent}
 ];
 
 @NgModule({
