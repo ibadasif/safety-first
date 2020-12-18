@@ -23,6 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { Covid1Component } from './covid1/covid1.component';
 import { Covid2Component } from './covid2/covid2.component';
 import { Covid3Component } from './covid3/covid3.component';
+import { LoginComponent } from './login/login.component';
  
 
 @NgModule({
@@ -37,7 +38,8 @@ import { Covid3Component } from './covid3/covid3.component';
     EmergencyComponent,
     Covid1Component,
     Covid2Component,
-    Covid3Component
+    Covid3Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
