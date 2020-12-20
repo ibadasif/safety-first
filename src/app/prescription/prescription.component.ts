@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { DengueComponent } from '../dengue/dengue.component';
 
 @Component({
   selector: 'app-prescription',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openDialog() {
+    const dialogRef = this.dialog.open(DengueComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }

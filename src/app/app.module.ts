@@ -18,12 +18,15 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { PrescriptionComponent } from './prescription/prescription.component';
 import { EmergencyComponent } from './emergency/emergency.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AboutComponent } from './about/about.component';
 import { Covid1Component } from './covid1/covid1.component';
 import { Covid2Component } from './covid2/covid2.component';
 import { Covid3Component } from './covid3/covid3.component';
 import { LoginComponent } from './login/login.component';
+import { from } from 'rxjs';
+import { DengueComponent } from './dengue/dengue.component';
  
 
 @NgModule({
@@ -39,7 +42,8 @@ import { LoginComponent } from './login/login.component';
     Covid1Component,
     Covid2Component,
     Covid3Component,
-    LoginComponent
+    LoginComponent,
+    DengueComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,8 @@ import { LoginComponent } from './login/login.component';
     MatIconModule,
     MatCardModule,
     MatTabsModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
