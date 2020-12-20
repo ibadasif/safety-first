@@ -24,46 +24,24 @@
     border-radius: 1rem;
     position: relative;
     margin: 0.5rem;
-    background-color: gray;
+    background-color: crimson;  
   }
-  
-  .container2 {
-    overflow: hidden;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-    background-color: white;
-    text-align: center;
-    border-radius: 1rem;
-    position: relative;
-    margin: 0.5rem;
-    background-color: gray;
-  }
-  
-  .container3 {
-    overflow: hidden;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-    background-color: white;
-    text-align: center;
-    border-radius: 1rem;
-    position: relative;
-    margin: 0.5rem;
-    background-color: gray;
-  }
-  
-  .container4 {
-    overflow: hidden;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-    background-color: white;
-    text-align: center;
-    border-radius: 1rem;
-    position: relative;
-    margin: 0.5rem;
-    background-color:gray;
-  }
-  
+
   .description {
     margin: 1rem 2rem;
     font-size: 0.9rem;
     color: white;
   }
+
+  header {
+    font-family: "Arial Black", sans-serif;
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+  }
+ 
 
   
