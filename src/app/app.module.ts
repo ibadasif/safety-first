@@ -27,6 +27,20 @@ import { Covid3Component } from './covid3/covid3.component';
 import { LoginComponent } from './login/login.component';
 import { from } from 'rxjs';
 import { DengueComponent } from './dengue/dengue.component';
+import { TyphoidComponent } from './typhoid/typhoid.component';
+import { TuberculosisComponent } from './tuberculosis/tuberculosis.component';
+import { HypertensionComponent } from './hypertension/hypertension.component';
+import { DiabetesComponent } from './diabetes/diabetes.component';
+import { HepatitisComponent } from './hepatitis/hepatitis.component';
+import { BraintumorComponent } from './braintumor/braintumor.component';
+import { MultiplesclerosisComponent } from './multiplesclerosis/multiplesclerosis.component';
+import { AllergyComponent } from './allergy/allergy.component';
+import { AsthamaComponent } from './asthama/asthama.component';
+import { LiverdiseaseComponent } from './liverdisease/liverdisease.component';
+import { AlzheimerComponent } from './alzheimer/alzheimer.component';
+import { InfluenzaComponent } from './influenza/influenza.component';
+import { AppendixComponent } from './appendix/appendix.component';
+import { AcnescarsComponent } from './acnescars/acnescars.component';
  
 
 @NgModule({
@@ -43,7 +57,21 @@ import { DengueComponent } from './dengue/dengue.component';
     Covid2Component,
     Covid3Component,
     LoginComponent,
-    DengueComponent
+    DengueComponent,
+    TyphoidComponent,
+    TuberculosisComponent,
+    HypertensionComponent,
+    DiabetesComponent,
+    HepatitisComponent,
+    BraintumorComponent,
+    MultiplesclerosisComponent,
+    AllergyComponent,
+    AsthamaComponent,
+    LiverdiseaseComponent,
+    AlzheimerComponent,
+    InfluenzaComponent,
+    AppendixComponent,
+    AcnescarsComponent
   ],
   imports: [
     BrowserModule,
