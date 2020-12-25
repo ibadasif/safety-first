@@ -13,10 +13,8 @@ import {AlzheimerComponent} from '../alzheimer/alzheimer.component';
 import {AsthamaComponent} from '../asthama/asthama.component';
 import {AppendixComponent} from '../appendix/appendix.component';
 import {BraintumorComponent} from '../braintumor/braintumor.component';
-import {AcnescarsComponent} from '../acnescars/acnescars.component';
 import {DiabetesComponent} from '../diabetes/diabetes.component';
 import {TuberculosisComponent} from '../tuberculosis/tuberculosis.component';
-
 
 
 @Component({
@@ -116,13 +114,7 @@ export class PrescriptionComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  openacne() {
-    const dialogRef = this.dialog.open(AcnescarsComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
+ 
   opendiabetes() {
     const dialogRef = this.dialog.open(DiabetesComponent);
 

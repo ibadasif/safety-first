@@ -1,1 +1,24 @@
-<p>influenza works!</p>
+<h2 mat-dialog-title>DETAILS</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>cause</h3>
+  <p>What Causes the Flu? The flu is caused by influenza viruses that infect the nose, throat, and lungs. These viruses spread when people with flu cough, sneeze or talk, sending droplets with the virus into the air and potentially into the mouths or noses of people who are nearby. </p>
+
+  <h3>Symptoms</h3>
+  <p>At first, the flu may seem like a common cold with a runny nose, sneezing and sore throat. But colds usually develop slowly, whereas the flu tends to come on suddenly. And although a cold can be a bother, you usually feel much worse with the flu.</p>
+
+  <h3>Treatment and Care</h3>
+  <p>Usually, you'll need nothing more than rest and plenty of fluids to treat the flu. But if you have a severe infection or are at higher risk for complications, your doctor may prescribe an antiviral drug to treat the flu. These drugs can include oseltamivir (Tamiflu), zanamivir (Relenza), peramivir (Rapivab) or baloxavir (Xofluza). These drugs may shorten your illness by a day or so and help prevent serious complications.
+
+    Oseltamivir is an oral medication. Zanamivir is inhaled through a device similar to an asthma inhaler and shouldn't be used by anyone with certain chronic respiratory problems, such as asthma and lung disease.
+    
+    Antiviral medication side effects may include nausea and vomiting. These side effects may be lessened if the drug is taken with food.
+    
+    Most circulating strains of influenza have become resistant to amantadine and rimantadine (Flumadine), which are older antiviral drugs that are no longer recommended.</p>
+
+    
+   
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>GOT IT</button>
+</mat-dialog-actions>

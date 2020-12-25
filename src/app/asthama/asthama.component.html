@@ -1,1 +1,25 @@
-<p>asthama works!</p>
+<h2 mat-dialog-title>DETAILS</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>cause</h3>
+  <p> Airborne allergens, such as pollen, dust mites, mold spores, pet dander or particles of cockroach waste.
+     Respiratory infections, such as the common cold. Physical activity. Cold air.Au</p>
+
+  <h3>Symptoms</h3>
+  <p>Asthma signs and symptoms include:</p>
+    <ul>
+    <li>Shortness of breath.</li>
+      <li>Chest tightness or pain.</li>
+        <li>Wheezing when exhaling, which is a common sign of asthma in children.</li>
+          <li>Trouble sleeping caused by shortness of breath, coughing or wheezing.</li>
+            <li>Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu.</li></ul>
+
+  <h3>Treatment and Care</h3>
+  <p>Long-term control medications such as inhaled corticosteroids are the most important medications used to keep asthma under control.
+     These preventive medications treat the airway inflammation that leads to asthma symptoms. Used on a daily basis, these medications can reduce or eliminate asthma flare-ups.</p>
+    
+   
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>GOT IT</button>
+</mat-dialog-actions>

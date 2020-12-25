@@ -1,1 +1,39 @@
-<p>appendix works!</p>
+<h2 mat-dialog-title>DETAILS</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>cause</h3>
+  <p> The cause of appendicitis is not fully understood. However, in most cases,
+     a blockage inside the appendix probably starts a process. The blockage may 
+     be from a small, hard piece of stool (fecalith), a foreign body, or, rarely,
+      even worms. As a result of the blockage, the appendix becomes inflamed and infected.
+       If inflammation continues without treatment, the appendix can rupture. A ruptured appendix 
+       may cause a pus-filled pocket of infection (abscess) to form. As a result, peritonitis
+        (inflammation and usually infection of the abdominal cavity, which may result in a 
+        life-threatening infection) may develop.</p>
+
+  <h3>Symptoms</h3>
+  <p>Fewer than 50% of people with appendicitis have the traditionally described symptoms in which pain begins 
+    in the upper abdomen or around the navel, then nausea and vomiting develop, and then, after a few hours, 
+    the nausea passes, and the pain shifts to the right lower portion of the abdomen. When a doctor presses on 
+    this area, it is tender, and when the pressure is released, the pain may increase sharply (rebound tenderness). 
+    A fever of 100° to 101° F (37.7° to 38.3° C) is common. Moving and coughing increase the pain.</p>
+
+  <h3>Treatment and Care</h3>
+  <p>Surgical removal of the appendix
+    Antibiotics and fluids by vein
+    Surgery is the main treatment of appendicitis. Delaying surgery until the cause of the abdominal
+     pain is certain can be fatal: An infected appendix can rupture less than 36 hours after symptoms begin.
+    If appendicitis is found, fluids and antibiotics are given by vein and the appendix is removed (appendectomy).
+     If the doctor does an operation and appendicitis is not found, the appendix is usually removed anyway to prevent
+      any future risk of appendicitis.</p>
+    
+  <p> There has been recent interest in treating appendicitis only with antibiotics, so that surgery can be postponed or avoided.
+     Although this treatment may be successful in some people, it is still being studied, and surgical removal of the appendix is
+      still considered the recommended treatment for appendicitis.</p>
+    
+   
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>GOT IT</button>
+</mat-dialog-actions>
+
