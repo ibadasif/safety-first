@@ -6,7 +6,8 @@
     <div *ngIf="loggedInUser == null ">
       <a routerLink="" mat-button>Login</a></div>
     <a routerLink="/home" mat-button>Home</a>
-    <a routerLink="/service" mat-button>Services</a>
+    <div *ngIf="accountType == 'User' ">
+    <a routerLink="/service" mat-button>Services</a></div>
     <a routerLink="/about" mat-button>About Us</a>
     <div *ngIf="loggedInUser != null ">
       <a (click)="logout()" mat-button>Log Out</a></div>

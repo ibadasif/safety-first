@@ -47,6 +47,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CovidMildComponent } from './covid-mild/covid-mild.component';
 import { CovidHighComponent } from './covid-high/covid-high.component';
 import { CovidNormalComponent } from './covid-normal/covid-normal.component';
+import {DoctorFormComponent} from './doctor-form/doctor-form.component'
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { CovidNormalComponent } from './covid-normal/covid-normal.component';
     AcnescarsComponent,
     CovidMildComponent,
     CovidHighComponent,
-    CovidNormalComponent
+    CovidNormalComponent,
+    DoctorFormComponent
   ],
   imports: [
     BrowserModule,
