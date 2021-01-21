@@ -11,6 +11,7 @@ import { Covid2Component } from './covid2/covid2.component';
 import { Covid3Component } from './covid3/covid3.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'covid2', component: Covid2Component},
   {path: 'covid3', component: Covid3Component},
   {path: 'about', component: AboutComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'doctor-form',component: DoctorFormComponent}
 ];
 
 @NgModule({
