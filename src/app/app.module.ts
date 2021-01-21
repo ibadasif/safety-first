@@ -41,7 +41,9 @@ import { AlzheimerComponent } from './alzheimer/alzheimer.component';
 import { InfluenzaComponent } from './influenza/influenza.component';
 import { AppendixComponent } from './appendix/appendix.component';
 import { AcnescarsComponent } from './acnescars/acnescars.component';
- 
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,10 @@ import { AcnescarsComponent } from './acnescars/acnescars.component';
     MatCardModule,
     MatTabsModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

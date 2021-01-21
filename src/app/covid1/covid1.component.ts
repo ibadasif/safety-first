@@ -18,4 +18,5 @@ export class Covid1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
