@@ -23,8 +23,13 @@ export class DoctorFormComponent implements OnInit {
   }
   onSubmit(){
     this.doctorForm.removeControl('id');
-    console.log(this.doctorForm.value); 
-  }
+    console.log(this.doctorForm.value);
+    this.doctorService
+    .createDoctor(this.doctorForm.value)
+    .subscribe((data) => {
+      this.router.navigate(["doctor-list"]);
+    });    
+} 
 
   ngOnInit(): void {
   }

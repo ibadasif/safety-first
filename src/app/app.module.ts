@@ -11,7 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ServicesComponent } from './services/services.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { RegisterComponent } from './register/register.component';
@@ -47,8 +47,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CovidMildComponent } from './covid-mild/covid-mild.component';
 import { CovidHighComponent } from './covid-high/covid-high.component';
 import { CovidNormalComponent } from './covid-normal/covid-normal.component';
-import {DoctorFormComponent} from './doctor-form/doctor-form.component'
-
+import { DoctorFormComponent } from './doctor-form/doctor-form.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
+import { CdkTableModule} from '@angular/cdk/table';
+import { DataSource } from '@angular/cdk/table';
+import { MatTableModule } from '@angular/material/table'  
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +84,8 @@ import {DoctorFormComponent} from './doctor-form/doctor-form.component'
     CovidMildComponent,
     CovidHighComponent,
     CovidNormalComponent,
-    DoctorFormComponent
+    DoctorFormComponent,
+    DoctorListComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,9 +101,11 @@ import {DoctorFormComponent} from './doctor-form/doctor-form.component'
     MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CdkTableModule,
+    MatTableModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
