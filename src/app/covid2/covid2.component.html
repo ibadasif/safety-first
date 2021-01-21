@@ -1,69 +1,121 @@
 <div class="container">
-    <!-- Content here -->
-    <h1><p class="text-danger"><strong>Round2</strong></p></h1>
-   
-    <form>
-        <p> Are you breathing properly?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">No</label>
-        </div>
-        <p> Have you done any lackness in precautions?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">No</label>
-        </div>
-        <p> Have you been in contact with anyone whom you find sneezing and coughing in past 2 weeks?</p>
-        <div class="form-group">
-            <label for="exampleInputEmail1">If any then explain if no then write Null</label>
-            <input type="text" class="form-control" id="exampleInputEmail1">
-        </div>
-        <p>In last 48 hours have you had any of the mentioned symptoms?</p>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Fever of 100F(37.8C) or above
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Chilled or repeated shaking with chills
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Muscle aches
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-             Loss of smell or taste or change in both
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Headache
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              None of the above
-            </label>
-        </div>
-        
-        <button (click)="goToPage('covid3')" class="button1" mat-button color="accent">We have few more to ask</button>
-    </form>
+  <!-- Content here -->
+  <h1>
+    <p class="text-danger"><strong>Round2</strong></p>
+  </h1>
+
+  <form>
+    <p>Are you breathing properly?</p>
+      <div id="breathing">
+        <input
+          type="radio"
+          name="breathing"
+          value="yes"
+        />
+        <label class="form-check-label">Yes</label>
+      <input
+      type="radio"
+      name="breathing"
+      value="no"
+    />
+      <label class="form-check-label">No</label>
+    </div>
+    <p>Have you done any lackness in precautions?</p>
+    <div id="precautions">
+        <input
+          type="radio"
+          name="precautions"
+          value="yes"
+        />
+        <label class="form-check-label">Yes</label>
+      <input
+      type="radio"
+      name="precautions"
+      value="no"
+    />
+      <label class="form-check-label">No</label>
+    </div>
+    <p>
+      Have you been in contact with anyone whom you find sneezing and coughing
+      in past 2 weeks?
+    </p>
+    <div class="form-group">
+      <label for="exampleInputEmail1"
+        >If any then explain if no then write Null</label
+      >
+      <input type="text" class="form-control" id="exampleInputEmail1" />
+    </div>
+    <p>In last 48 hours have you had any of the mentioned symptoms?</p>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1">
+        Fever of 100F(37.8C) or above
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1">
+        Chilled or repeated shaking with chills
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1"> Muscle aches </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1">
+        Loss of smell or taste or change in both
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1"> Headache </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="defaultCheck1"
+      />
+      <label class="form-check-label" for="defaultCheck1">
+        None of the above
+      </label>
+    </div>
+
+    <button
+      (click)="goToPage('covid3')"
+      class="button1"
+      mat-button
+      color="accent"
+    >
+      We have few more to ask
+    </button>
+  </form>
 </div>

@@ -2,44 +2,44 @@
     <!-- Content here -->
     <h1><p class="text-danger"><strong>Round1</strong></p></h1>
    
-    <form>
+    <form [formGroup]="covid1Form">
         <div class="form-group">
-          <label for="exampleInputEmail1">Any disease?</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label>Any disease?</label>
+          <input type="text"
+          formControlName="disease"
+          class="form-control"
+          placeholder="Enter disease">
           <small id="emailHelp" class="form-text text-muted">We'll never share your priviacy with anyone else.</small>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Any genetic disorder?</label>
-          <input type="text" class="form-control" id="exampleInputEmail1">
+          <label >Any genetic disorder?</label>
+          <input type="text"
+          formControlName="geneticDisorder"
+          class="form-control"
+          placeholder="Any Genetic Disorder">
         </div>
         <p>Your age?</p>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="mycheck">
-            <label class="form-check-label" for="defaultCheck1">
+        <div id="age">
+            <label><input type="radio" name="age" value="10">
+            
                 Between 1-15 yrs
             </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
+            <label><input type="radio" name="age" value="20">
+        
                 Between 16-30 yrs
             </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
+            <label><input type="radio" name="age" value="35">
+            
               30 above yrs
             </label>
         </div>
 
         <p> Your gender?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Male</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
+        <div class="form-check form-check-inline" id = "gender">
+            <label><input  type="radio" name="gender" value="male">
+            Male</label>
+            <label><input  type="radio" name="gender" value="female">
+            Female</label>
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">

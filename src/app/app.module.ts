@@ -44,6 +44,9 @@ import { AcnescarsComponent } from './acnescars/acnescars.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CovidMildComponent } from './covid-mild/covid-mild.component';
+import { CovidHighComponent } from './covid-high/covid-high.component';
+import { CovidNormalComponent } from './covid-normal/covid-normal.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     AlzheimerComponent,
     InfluenzaComponent,
     AppendixComponent,
-    AcnescarsComponent
+    AcnescarsComponent,
+    CovidMildComponent,
+    CovidHighComponent,
+    CovidNormalComponent
   ],
   imports: [
     BrowserModule,

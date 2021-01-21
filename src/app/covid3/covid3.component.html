@@ -4,17 +4,15 @@
    
     <form>
         <p>Do you have bluish lips and pale face these days?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">No</label>
+        <div class="form-check form-check-inline" id="face">
+            <input type="radio" name="face" value="yes">
+            <label class="form-check-label"> Yes  </label>
+            <input type="radio" name="face" value="no">
+            <label class="form-check-label"> No</label>
         </div>
         <p>How many following issues that you are going through with?</p>
         <div class="form-check">
-            <input onclick="clicked()" class="form-check-input" type="checkbox" id="defaultCheck1" >
+            <input class="form-check-input" type="checkbox" id="defaultCheck1" >
             <label class="form-check-label" for="defaultCheck1">
                 Severe chest pain
             </label>
@@ -38,33 +36,28 @@
             </label>
         </div>
         <p>Are you facing dehyderation and dryness in your throat?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <div class="form-check form-check-inline" id="dehydration">
+            <input type="radio" name="dehydration" value="yes">
+            <label class="form-check-label" >Yes</label>
+            <input type="radio" name="dehydration" value="no">
             <label class="form-check-label" for="inlineRadio2">No</label>
         </div>
         <p>What is your blood pressure these days?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">High</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Normal</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Low</label>
+        <div class="form-check form-check-inline" id="bloodPressure">
+            <input type="radio" name="bloodPressure" value="high">
+            <label class="form-check-label">High</label>
+           <input type="radio" name="bloodPressure" value="normal">
+            <label class="form-check-label">Normal</label>
+            <input type="radio" name="bloodPressure" value="low">
+            <label class="form-check-label">Low</label>
         </div>
         
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Are you sure with privided info ?</label>
         </div>
-        <button  class="button1" mat-button color="accent">Lets hope for the best</button>
+        <button (click)="submitResult()" class="button1" mat-button color="accent">Submit</button>
+        <button (click)="checkResult()" class="button1" mat-button color="accent">Check Result</button>
     </form>
  
 </div>
