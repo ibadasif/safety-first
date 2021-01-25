@@ -51,8 +51,9 @@ import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { CdkTableModule} from '@angular/cdk/table';
 import { DataSource } from '@angular/cdk/table';
-import { MatTableModule } from '@angular/material/table'
-import { CommonModule } from '@angular/common';   
+import { MatTableModule } from '@angular/material/table'   
+import { AmbulanceComponent } from './ambulance/ambulance.component';
+import { CommonModule } from '@angular/common';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,6 +88,7 @@ import { CommonModule } from '@angular/common';
     CovidNormalComponent,
     DoctorFormComponent,
     DoctorListComponent,
+    AmbulanceComponent,
   ],
   imports: [
     BrowserModule,

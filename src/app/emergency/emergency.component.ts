@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AmbulanceComponent } from '../ambulance/ambulance.component';
+import {MatDialog} from '@angular/material/dialog';
 
 declare const L: any;
 
@@ -9,7 +11,7 @@ declare const L: any;
 })
 export class EmergencyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     if (!navigator.geolocation){
@@ -54,6 +56,14 @@ marker.bindPopup('<b>My Location</b>').openPopup();
       enableHighAccuracy: true,
       timeout: 5000,
       maximumAge: 0
+    });
+  }
+
+  openAmb(){
+    const dialogRef = this.dialog.open(AmbulanceComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 

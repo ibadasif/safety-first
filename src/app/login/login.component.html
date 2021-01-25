@@ -1,8 +1,4 @@
-<link
-  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -11,25 +7,15 @@
   <div id="login">
     <form [formGroup]="loginForm">
       <div class="container">
-        <div
-          id="login-row"
-          class="row justify-content-center align-items-center"
-        >
+        <div id="login-row" class="row justify-content-center align-items-center">
           <div id="login-column" class="col-md-6">
             <div id="login-box" class="col-md-12">
               <h3 class="text-center">Login</h3>
               <div class="form-group">
                 <label>Phone Number</label><br />
-                <input
-                  type="text"
-                  formControlName="phone"
-                  class="form-control"
-                  placeholder="Enter phone or email address"
-                />
-                <div
-                  *ngIf="fields.phone.errors && !fields.phone.pristine"
-                  style="color: brown"
-                >
+                <input type="text" formControlName="phone" class="form-control"
+                  placeholder="Enter phone or email address" />
+                <div *ngIf="fields.phone.errors && !fields.phone.pristine" style="color: brown">
                   <div [hidden]="!fields.phone.errors.required">
                     Phone is required.
                   </div>
@@ -37,33 +23,20 @@
               </div>
               <div class="form-group">
                 <label for="password">Password:</label><br />
-                <input
-                  type="password"
-                  formControlName="password"
-                  class="form-control"
-                  placeholder="Enter password"
-                />
-                <div
-                  *ngIf="fields.password.errors && !fields.password.pristine"
-                  style="color: brown"
-                >
+                <input type="password" formControlName="password" class="form-control" placeholder="Enter password" />
+                <div *ngIf="fields.password.errors && !fields.password.pristine" style="color: brown">
                   <div [hidden]="!fields.password.errors.required">
                     Password is required.
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <button
-                  (click)="login()"
-                  type="submit"
-                  class="btn btn-info btn-md"
-                  [disabled]="loginForm.invalid"
-                >
+                <button (click)="login()" type="submit" class="md-button" [disabled]="loginForm.invalid">
                   Submit
                 </button>
-              </div>
-              <div id="register-link" class="text-right">
-                <a href="/register">Register</a>
+                <button (click)="register()" type="register" class="md-button" [disabled]="loginForm.invalid">
+                  Register
+                </button>
               </div>
             </div>
           </div>
