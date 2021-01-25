@@ -2,13 +2,13 @@
     <!-- Content here -->
     <h1><p class="text-danger"><strong>Round3</strong></p></h1>
    
-    <form>
+    <form [formGroup]="covid3Form">
         <p>Do you have bluish lips and pale face these days?</p>
-        <div class="form-check form-check-inline" id="face">
+        <div class="form-group" id="face">
             <input type="radio" name="face" value="yes">
-            <label class="form-check-label"> Yes  </label>
+            <label> Yes  </label>
             <input type="radio" name="face" value="no">
-            <label class="form-check-label"> No</label>
+            <label > No</label>
         </div>
         <p>How many following issues that you are going through with?</p>
         <div class="form-check">
@@ -36,28 +36,28 @@
             </label>
         </div>
         <p>Are you facing dehyderation and dryness in your throat?</p>
-        <div class="form-check form-check-inline" id="dehydration">
+        <div class="form-group" id="dehydration">
             <input type="radio" name="dehydration" value="yes">
-            <label class="form-check-label" >Yes</label>
+            <label >Yes</label>
             <input type="radio" name="dehydration" value="no">
-            <label class="form-check-label" for="inlineRadio2">No</label>
+            <label >No</label>
         </div>
         <p>What is your blood pressure these days?</p>
-        <div class="form-check form-check-inline" id="bloodPressure">
+        <div class="form-group" id="bloodPressure">
             <input type="radio" name="bloodPressure" value="high">
-            <label class="form-check-label">High</label>
+            <label >High</label>
            <input type="radio" name="bloodPressure" value="normal">
-            <label class="form-check-label">Normal</label>
+            <label >Normal</label>
             <input type="radio" name="bloodPressure" value="low">
-            <label class="form-check-label">Low</label>
+            <label >Low</label>
         </div>
         
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Are you sure with privided info ?</label>
         </div>
-        <button (click)="submitResult()" class="button1" mat-button color="accent">Submit</button>
-        <button (click)="checkResult()" class="button1" mat-button color="accent">Check Result</button>
+        <button (click)="submitResult()" class="button1" mat-button color="accent" [disabled]="covid3Form.invalid">Submit</button>
+        <button (click)="checkResult()" class="button2" mat-button color="accent" >Check Result</button>
     </form>
  
 </div>

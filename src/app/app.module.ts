@@ -51,7 +51,8 @@ import { DoctorFormComponent } from './doctor-form/doctor-form.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { CdkTableModule} from '@angular/cdk/table';
 import { DataSource } from '@angular/cdk/table';
-import { MatTableModule } from '@angular/material/table'  
+import { MatTableModule } from '@angular/material/table'
+import { CommonModule } from '@angular/common';   
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +104,8 @@ import { MatTableModule } from '@angular/material/table'
     FormsModule,
     HttpClientModule,
     CdkTableModule,
-    MatTableModule
+    MatTableModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

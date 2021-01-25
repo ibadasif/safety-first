@@ -7,6 +7,7 @@ import { CovidHighComponent } from '../covid-high/covid-high.component';
 import { CovidMildComponent } from '../covid-mild/covid-mild.component';
 import { CovidNormalComponent } from '../covid-normal/covid-normal.component';
 import { Covid3 } from '../_models/covid3.model';
+import { CovidtestService } from '../_services/covidtest.service';
 
 @Component({
   selector: 'app-covid3',
@@ -25,7 +26,8 @@ export class Covid3Component implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private covidTestService: CovidtestService
   ) {
     this.covid3Form = this.formBuilder.group(new Covid3());
   }
@@ -44,9 +46,9 @@ export class Covid3Component implements OnInit {
       this.bloodPressure.value
     );
     console.log(this.covid3Form.value);
-    //this.covidTestService.createCovid2(this.covid2Form.value).subscribe((data) => {
+    this.covidTestService.createCovid3(this.covid3Form.value).subscribe((data) => {
     //console.log(data);
-    //});
+    });
   }
 
   checkResult() {

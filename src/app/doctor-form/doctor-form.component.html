@@ -18,7 +18,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-2">
               <div class="form-group">
                 <label>Doctor Name:</label>
                 <input
@@ -31,19 +31,28 @@
                 />
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="form-group">
-              <label></label>
-              <button
-                class="btn btn-block btn-flat btn-primary"
-                [disabled]="doctorForm.invalid"
-              >
-                Submit
-              </button>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label>Doctor Email:</label>
+                <input
+                  formControlName="email"
+                  placeholder="Enter Doctor Email"
+                  name="email"
+                  class="form-control"
+                  autofocus="autofocus"
+                  id="email"
+                />
+              </div>
             </div>
+          </div>
+          <div class="form-group">
+            <label></label>
+            <button
+              class="btn btn-block btn-flat btn-primary"
+              [disabled]="doctorForm.invalid"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

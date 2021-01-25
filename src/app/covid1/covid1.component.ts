@@ -35,10 +35,10 @@ export class Covid1Component implements OnInit {
     this.covid1Form.controls["age"].setValue(this.age.value);
     this.covid1Form.controls["gender"].setValue(this.gender.value);
     console.log(this.covid1Form.value);
-    //this.covidTestService.createCovid1(this.covid1Form.value).subscribe((data) => {
+    this.covidTestService.createCovid1(this.covid1Form.value).subscribe((data) => {
       //console.log(data);
       this.router.navigate([`${pageName}`]);
-    //});
+    });
     //this.router.navigate([`${pageName}`]);
   }
   

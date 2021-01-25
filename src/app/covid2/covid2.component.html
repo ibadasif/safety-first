@@ -4,35 +4,19 @@
     <p class="text-danger"><strong>Round2</strong></p>
   </h1>
 
-  <form>
+  <form [formGroup]="covid2Form">
     <p>Are you breathing properly?</p>
-      <div id="breathing">
-        <input
-          type="radio"
-          name="breathing"
-          value="yes"
-        />
-        <label class="form-check-label">Yes</label>
-      <input
-      type="radio"
-      name="breathing"
-      value="no"
-    />
+    <div id="breathing" class="form-group">
+      <input type="radio" name="breathing" value="yes" />
+      <label class="form-check-label">Yes</label>
+      <input type="radio" name="breathing" value="no" />
       <label class="form-check-label">No</label>
     </div>
     <p>Have you done any lackness in precautions?</p>
-    <div id="precautions">
-        <input
-          type="radio"
-          name="precautions"
-          value="yes"
-        />
-        <label class="form-check-label">Yes</label>
-      <input
-      type="radio"
-      name="precautions"
-      value="no"
-    />
+    <div id="precautions" class="form-group">
+      <input type="radio" name="precautions" value="yes" />
+      <label class="form-check-label">Yes</label>
+      <input type="radio" name="precautions" value="no" />
       <label class="form-check-label">No</label>
     </div>
     <p>
@@ -40,10 +24,21 @@
       in past 2 weeks?
     </p>
     <div class="form-group">
-      <label for="exampleInputEmail1"
-        >If any then explain if no then write Null</label
+      <label>If any then explain if no then write Null</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="symptomps"
+        placeholder="Enter null or Provide information of contact"
+      />
+      <div
+        *ngIf="fields.symptomps.errors && !fields.symptomps.pristine"
+        style="color: brown"
       >
-      <input type="text" class="form-control" id="exampleInputEmail1" />
+        <div [hidden]="!fields.symptomps.errors.required">
+          You cannot leave this empty
+        </div>
+      </div>
     </div>
     <p>In last 48 hours have you had any of the mentioned symptoms?</p>
     <div class="form-check">
@@ -114,6 +109,7 @@
       class="button1"
       mat-button
       color="accent"
+      [disabled]="covid2Form.invalid"
     >
       We have few more to ask
     </button>
