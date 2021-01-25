@@ -40,4 +40,5 @@ export class RegisterComponent implements OnInit {
     this.registerForm.reset();
   };
 
+
 }
