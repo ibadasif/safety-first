@@ -10,7 +10,7 @@ declare var $;
   styleUrls: ['./doctor-list.component.scss'],
 })
 export class DoctorListComponent implements OnInit {
-  displayedColumns: string[] = ['status', 'name'];
+  displayedColumns: string[] = ['status', 'name','email','phone','qualification','hospital','clinic'];
   doctors: any;
   constructor(
     private formBuilder: FormBuilder,

@@ -15,6 +15,34 @@
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
+      <!-- Name Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+      </ng-container>
+
+        <!-- Name Column -->
+    <ng-container matColumnDef="qualification">
+      <th mat-header-cell *matHeaderCellDef> Qualification </th>
+      <td mat-cell *matCellDef="let element"> {{element.qualifications}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="hospital">
+      <th mat-header-cell *matHeaderCellDef> Hospital </th>
+      <td mat-cell *matCellDef="let element"> {{element.hospitals}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="clinic">
+      <th mat-header-cell *matHeaderCellDef> Clinic </th>
+      <td mat-cell *matCellDef="let element"> {{element.clinic}} </td>
+    </ng-container>
+  
+    
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
