@@ -1,5 +1,6 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from "@angular/router";
 import { AuthserviceService } from '../_services/authservice.service';
@@ -28,8 +29,8 @@ export class LoginComponent implements OnInit {
     }
   
     this.loginForm = this.formBuilder.group({
-      phone: [""],
-      password: [""],
+      phone: ["",Validators.required],
+      password: ["",Validators.required],
       /* recaptchaReactive: [null, Validators.required] */
     });
   }

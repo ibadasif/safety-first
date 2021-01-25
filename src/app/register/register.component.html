@@ -14,6 +14,7 @@
         <div id="login-column" class="col-md-6">
           <div id="login-box" class="col-md-12">
             <div>
+              <h3 class="text-center">Register</h3>
               <select
                 style="color: lightslategray !important"
                 id="accountType"
@@ -28,7 +29,6 @@
                 <option value="User">User</option>
               </select>
             </div>
-            <h3 class="text-center">Register</h3>
             <div class="form-group">
               <label>Your Name:</label><br />
               <input
@@ -38,6 +38,9 @@
                 class="form-control"
                 placeholder="Enter First Name"
               />
+              <div *ngIf="fields.name.errors && !fields.name.pristine" style="color: brown;">
+                <div [hidden]="!fields.name.errors.required">Name is required.</div>
+              </div>
             </div>
             <div class="form-group">
               <label>Your Email:</label><br />
@@ -49,6 +52,9 @@
                 class="form-control"
                 id="email"
               />
+              <div *ngIf="fields.email.errors && !fields.email.pristine" style="color: brown;">
+                <div [hidden]="!fields.email.errors.required">E-mail is required.</div>
+              </div>
             </div>
             <div class="form-group">
               <label>Username:</label><br />
@@ -60,6 +66,9 @@
                 class="form-control"
                 id="username"
               />
+              <div *ngIf="fields.username.errors && !fields.username.pristine" style="color: brown;">
+                <div [hidden]="!fields.username.errors.required">Username is required.</div>
+              </div>
             </div>
             <div class="form-group">
               <label>Password:</label><br />
@@ -71,17 +80,9 @@
                 class="form-control"
                 id="password"
               />
-            </div>
-            <div class="form-group">
-              <label>Confirm Password:</label><br />
-              <input
-                type="password"
-                formControlName="confirmPassword"
-                placeholder="Enter Confirm Password"
-                name="confirmPassword"
-                class="form-control"
-                id="confirmPassword"
-              />
+              <div *ngIf="fields.password.errors && !fields.password.pristine" style="color: brown;">
+                <div [hidden]="!fields.password.errors.required">Password is required.</div>
+              </div>
             </div>
             <div class="form-group">
               <label>Phone no:</label><br />
@@ -93,6 +94,9 @@
                 class="form-control"
                 id="phone"
               />
+              <div *ngIf="fields.phone.errors && !fields.phone.pristine" style="color: brown;">
+                <div [hidden]="!fields.phone.errors.required">Phone is required.</div>
+              </div>
             </div>
             <div class="form-group">
               <label
@@ -101,13 +105,14 @@
                     formControlName="agreed"
                     type="checkbox" /></span></label
               ><br />
-              <input
+              <button
                 (click)="register()"
                 type="submit"
                 name="submit"
                 class="btn btn-info btn-md"
                 value="submit"
-              />
+                [disabled]="registerForm.invalid"
+              >Register</button>
             </div>
             <div id="register-link" class="text-right">
               <a href="/">Login</a>

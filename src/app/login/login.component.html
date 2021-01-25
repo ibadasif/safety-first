@@ -17,37 +17,54 @@
         >
           <div id="login-column" class="col-md-6">
             <div id="login-box" class="col-md-12">
-                              <h3 class="text-center">Login</h3>
-                <div class="form-group">
-                  <label>Phone or Email:</label><br />
-                  <input
-                    type="text"
-                    formControlName="phone"
-                    class="form-control"
-                    placeholder="Enter phone or email address"
-                  />
+              <h3 class="text-center">Login</h3>
+              <div class="form-group">
+                <label>Phone Number</label><br />
+                <input
+                  type="text"
+                  formControlName="phone"
+                  class="form-control"
+                  placeholder="Enter phone or email address"
+                />
+                <div
+                  *ngIf="fields.phone.errors && !fields.phone.pristine"
+                  style="color: brown"
+                >
+                  <div [hidden]="!fields.phone.errors.required">
+                    Phone is required.
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label for="password">Password:</label><br />
-                  <input
-                    type="password"
-                    formControlName="password"
-                    class="form-control"
-                    placeholder="Enter password"
-                  />
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label><br />
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  placeholder="Enter password"
+                />
+                <div
+                  *ngIf="fields.password.errors && !fields.password.pristine"
+                  style="color: brown"
+                >
+                  <div [hidden]="!fields.password.errors.required">
+                    Password is required.
+                  </div>
                 </div>
-                <div class="form-group">
-                  <button
-                  mat-raised-button
-                    (click)="login()"
-                    type="submit"
-                    class="btn btn-info btn-md"
-                    [disabled]="loginForm.invalid"
-                  >Submit</button>
-                </div>
-                <div id="register-link" class="text-right">
-                  <a href="/register">Register</a>
-                </div>
+              </div>
+              <div class="form-group">
+                <button
+                  (click)="login()"
+                  type="submit"
+                  class="btn btn-info btn-md"
+                  [disabled]="loginForm.invalid"
+                >
+                  Submit
+                </button>
+              </div>
+              <div id="register-link" class="text-right">
+                <a href="/register">Register</a>
+              </div>
             </div>
           </div>
         </div>
