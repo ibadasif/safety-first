@@ -1,50 +1,88 @@
 <div class="container">
-    <!-- Content here -->
-    <h1><p class="text-danger"><strong>Round1</strong></p></h1>
-   
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Any disease?</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your priviacy with anyone else.</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Any genetic disorder?</label>
-          <input type="text" class="form-control" id="exampleInputEmail1">
-        </div>
-        <p>Your age?</p>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Between 1-15 yrs
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Between 16-30 yrs
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              30 above yrs
-            </label>
-        </div>
+  <!-- Content here -->
+  <h1>
+    <p class="text-danger"><strong>Round1</strong></p>
+  </h1>
 
-        <p> Your gender?</p>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Male</label>
+  <form [formGroup]="covid1Form">
+    <div class="form-group">
+      <label>Any disease?</label>
+      <input
+        type="text"
+        formControlName="disease"
+        class="form-control"
+        placeholder="Enter disease"
+      />
+      <div
+        *ngIf="fields.disease.errors && !fields.disease.pristine"
+        style="color: brown"
+      >
+        <div [hidden]="!fields.disease.errors.required">
+          Enter Disease please
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
+      </div>
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your priviacy with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label>Any genetic disorder?</label>
+      <input
+        type="text"
+        formControlName="geneticDisorder"
+        class="form-control"
+        placeholder="Any Genetic Disorder"
+      />
+      <div
+        *ngIf="
+          fields.geneticDisorder.errors && !fields.geneticDisorder.pristine
+        "
+        style="color: brown"
+      >
+        <div [hidden]="!fields.geneticDisorder.errors.required">
+          You cannot leave this empty
         </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Are you sure with provided info </label>
-        </div>
-        <button (click)="goToPage('covid2')" class="button1" mat-button color="accent">Lets proceed further</button>
-    </form>
+      </div>
+    </div>
+    <p>Your age?</p>
+    <div id="age">
+      <label
+        ><input type="radio" name="age" value="10" />
+
+        Between 1-15 yrs
+      </label>
+      <label
+        ><input type="radio" name="age" value="20" />
+
+        Between 16-30 yrs
+      </label>
+      <label
+        ><input formControlName="age" type="radio" name="age" value="35" />
+
+        30 above yrs
+      </label>
+
+    </div>
+
+    <p>Your gender?</p>
+    <div class="form-check form-check-inline" id="gender">
+      <label><input type="radio" name="gender" value="male" /> Male</label>
+      <label><input type="radio" name="gender" value="female" /> Female</label>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1"
+        >Are you sure with provided info
+      </label>
+    </div>
+    <button
+      (click)="goToPage('covid2')"
+      class="button1"
+      mat-button
+      color="accent"
+      [disabled]="covid1Form.invalid"
+    >
+      Lets proceed further
+    </button>
+  </form>
 </div>
