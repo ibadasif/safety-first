@@ -1,7 +1,8 @@
+<html>
 <div class="container">
   <!-- Content here -->
   <h1>
-    <p class="text-danger"><strong>Round1</strong></p>
+    <p class="text-danger"><strong>ROUND 1</strong></p>
   </h1>
 
   <form [formGroup]="covid1Form">
@@ -27,6 +28,7 @@
     </div>
     <div class="form-group">
       <label>Any genetic disorder?</label>
+      <br>
       <input
         type="text"
         formControlName="geneticDisorder"
@@ -63,12 +65,13 @@
       </label>
 
     </div>
-
+    <br>
     <p>Your gender?</p>
     <div class="form-check form-check-inline" id="gender">
       <label><input type="radio" name="gender" value="male" /> Male</label>
       <label><input type="radio" name="gender" value="female" /> Female</label>
     </div>
+    <br>
     <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1" />
       <label class="form-check-label" for="exampleCheck1"
@@ -86,3 +89,4 @@
     </button>
   </form>
 </div>
+</html>
