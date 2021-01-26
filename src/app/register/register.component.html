@@ -1,123 +1,77 @@
-<link
-  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-  rel="stylesheet"
-  id="bootstrap-css"
-/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+
 <body>
   <div id="login">
-  <form [formGroup]="registerForm">
-    <div class="container">
-      <div id="login-row" class="row justify-content-center align-items-center">
-        <div id="login-column" class="col-md-6">
-          <div id="login-box" class="col-md-12">
-            <div>
-              <h3 class="text-center">Register</h3>
-              <select
-                style="color: lightslategray !important"
-                id="accountType"
-                name="accountType"
-                formControlName="accountType"
-                class="form-control"
-              >
-                <option disabled="" selected="" value="">
-                  Select Account Type
-                </option>
-                <option value="Admin">Admin</option>
-                <option value="User">User</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Your Name:</label><br />
-              <input
-                autofocus="autofocus"
-                type="text"
-                formControlName="name"
-                class="form-control"
-                placeholder="Enter First Name"
-              />
-              <div *ngIf="fields.name.errors && !fields.name.pristine" style="color: brown;">
-                <div [hidden]="!fields.name.errors.required">Name is required.</div>
+    <form [formGroup]="registerForm">
+      <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+              <div>
+                <h3 class="text-center">Register</h3>
+                <select style="color: lightslategray !important" id="accountType" name="accountType"
+                  formControlName="accountType" class="form-control">
+                  <option disabled="" selected="" value="">
+                    Select Account Type
+                  </option>
+                  <option value="Admin">Admin</option>
+                  <option value="User">User</option>
+                </select>
               </div>
-            </div>
-            <div class="form-group">
-              <label>Your Email:</label><br />
-              <input
-                type="email"
-                formControlName="email"
-                placeholder="Enter Email Address"
-                name="email"
-                class="form-control"
-                id="email"
-              />
-              <div *ngIf="fields.email.errors && !fields.email.pristine" style="color: brown;">
-                <div [hidden]="!fields.email.errors.required">E-mail is required.</div>
+              <div class="form-group">
+                <label>Your Name:</label><br />
+                <input autofocus="autofocus" type="text" formControlName="name" class="form-control"
+                  placeholder="Enter First Name" />
+                <div *ngIf="fields.name.errors && !fields.name.pristine" style="color: brown;">
+                  <div [hidden]="!fields.name.errors.required">Name is required.</div>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label>Username:</label><br />
-              <input
-                type="text"
-                formControlName="username"
-                placeholder="Enter Username"
-                name="username"
-                class="form-control"
-                id="username"
-              />
-              <div *ngIf="fields.username.errors && !fields.username.pristine" style="color: brown;">
-                <div [hidden]="!fields.username.errors.required">Username is required.</div>
+              <div class="form-group">
+                <label>Your Email:</label><br />
+                <input type="email" formControlName="email" placeholder="Enter Email Address" name="email"
+                  class="form-control" id="email" />
+                <div *ngIf="fields.email.errors && !fields.email.pristine" style="color: brown;">
+                  <div [hidden]="!fields.email.errors.required">E-mail is required.</div>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label>Password:</label><br />
-              <input
-                type="password"
-                formControlName="password"
-                placeholder="Enter Password"
-                name="password"
-                class="form-control"
-                id="password"
-              />
-              <div *ngIf="fields.password.errors && !fields.password.pristine" style="color: brown;">
-                <div [hidden]="!fields.password.errors.required">Password is required.</div>
+              <div class="form-group">
+                <label>Username:</label><br />
+                <input type="text" formControlName="username" placeholder="Enter Username" name="username"
+                  class="form-control" id="username" />
+                <div *ngIf="fields.username.errors && !fields.username.pristine" style="color: brown;">
+                  <div [hidden]="!fields.username.errors.required">Username is required.</div>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label>Phone no:</label><br />
-              <input
-                type="text"
-                formControlName="phone"
-                placeholder="Enter Phone as 03331234567"
-                name="phone"
-                class="form-control"
-                id="phone"
-              />
-              <div *ngIf="fields.phone.errors && !fields.phone.pristine" style="color: brown;">
-                <div [hidden]="!fields.phone.errors.required">Phone is required.</div>
+              <div class="form-group">
+                <label>Password:</label><br />
+                <input type="password" formControlName="password" placeholder="Enter Password" name="password"
+                  class="form-control" id="password" />
+                <div *ngIf="fields.password.errors && !fields.password.pristine" style="color: brown;">
+                  <div [hidden]="!fields.password.errors.required">Password is required.</div>
+                </div>
               </div>
+              <div class="form-group">
+                <label>Phone no:</label><br />
+                <input type="text" formControlName="phone" placeholder="Enter Phone as 03331234567" name="phone"
+                  class="form-control" id="phone" />
+                <div *ngIf="fields.phone.errors && !fields.phone.pristine" style="color: brown;">
+                  <div [hidden]="!fields.phone.errors.required">Phone is required.</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label><span>Remember me</span> <span><input formControlName="agreed"
+                      type="checkbox" /></span></label><br />
+                <button mat-raised-button (click)="register()" type="submit" name="submit" class="md-button"
+                  value="submit" [disabled]="registerForm.invalid">Register</button>
+              </div>
+
             </div>
-            <div class="form-group">
-              <label
-                ><span>Remember me</span> <span
-                  ><input
-                    formControlName="agreed"
-                    type="checkbox" /></span></label
-              ><br />
-              <button
-                (click)="register()"
-                type="submit"
-                name="submit"
-                class="md-button"
-                value="submit"
-              >Register</button>
-            </div>
-            
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
   </div>
 </body>
